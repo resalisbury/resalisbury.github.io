@@ -11,8 +11,8 @@
   simple, so you can just feel free to type. =) -->
 
 
-# My Fireside Chat - Educational Philosophy
-#### Subtitle
+# Educational Philosophy
+#### My Fireside Chat
 #### October 14, 2014
 
 One of the things that has impressed me most about Dev Bootcamp is not only the content of their educational philosophy, but also its application.  Ideas around collaborative teamwork, experimentation and co-creation are thrown around a lot, but not always realized in practice.
