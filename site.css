@@ -23,6 +23,10 @@ a:hover {
   color: #c2c0cc;
 }
 
+a:visited {
+  /*color: black;*/
+}
+
 #rex {
   width: 50%;
   margin-top: 1%;
@@ -55,4 +59,39 @@ a:hover {
   margin-top: 2%;
   margin-left: 2%;
 
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 0px 0px 0px 0px;
+  vertical-align: middle;
+}
+
+.social {
+  text-align: center;
+  margin: 15px 0px 0px 10px;
+  text-decoration: none;
+}
+
+
+ul li {
+  display: block;
+  height: 50px;
+  line-height: 30px;
+}
+
+ul li a {
+  text-decoration: underline;
+}
+
+.tag {
+  text-align: center;
+  vertical-align: middle;
+  font-size: .75em;
+  color: #6d6b73;
+}
+
+body {
+  font-family: Calibri;
 }
