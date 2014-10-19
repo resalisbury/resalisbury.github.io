@@ -43,6 +43,7 @@ a:visited {
 .hero {
   background-color: red;
   width: 50%;
+  float: left;
   z-index: -1;
 }
 
@@ -92,5 +93,6 @@ footer {
   text-align: center;
   color: #7f7f7f;
   font-size: .75em;
+  float: left;
 }
 
