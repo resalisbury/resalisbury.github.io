@@ -1,9 +1,7 @@
 * {
   font-family: 'Lato', sans-serif;
-  /*-webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;*/
 }
+
 nav {
   background-color: #5d73cd;
   text-align: center;
@@ -94,6 +92,5 @@ footer {
   text-align: center;
   color: #7f7f7f;
   font-size: .75em;
-
 }
 
