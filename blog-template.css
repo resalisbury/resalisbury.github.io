@@ -1,0 +1,61 @@
+.post {
+  /*background-color: green;*/
+  display: block;
+  font-family: 'Lato', sans-serif;
+  margin: 3% auto 3% auto;
+  max-width: 800px;
+  text-align: justify;
+}
+
+.post-title {
+  font-size: 2em;
+  color: black;
+}
+
+.date, .tag {
+  font-size: 1em;
+  color: #7f7f7f;
+}
+
+.code-blog {
+  border: 1px dashed #7f7f7f;
+  padding: 10px 10px 10px 10px;
+}
+
+.fixed-block {
+  position: fixed;
+  width: 100px;
+  height: 60px;
+  top:150px;
+  right: 3%;
+  background: #3ca041;
+  color: white;
+  text-align: center;
+  vertical-align: center;
+  padding-top: 40px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.absolute-block {
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  top:50px;
+  right: 3%;
+  background: #a03d4a;
+  color: white;
+  text-align: center;
+  vertical-align: center;
+  padding-top: 15px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.post a {
+  text-decoration: underline;
+  color: black;
+}
+
+.block-img {
+  width: 100%;
+  max-width: 800px;
+}

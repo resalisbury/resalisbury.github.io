@@ -9,6 +9,7 @@
 .post {
   /*background-color: green;*/
   display: block;
+  font-family: 'Lato', sans-serif;
 }
 
 .post-title {
@@ -30,5 +31,4 @@
 .twitter-timeline {
   float: right;
   margin: 3% 3% 0% 0%;
-
 }

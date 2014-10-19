@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Positioning in CSS - Rex Salisbury</title>
+    <link rel="stylesheet" type="text/css" href="../blog-template.css">
+    <link rel="stylesheet" type="text/css" href="../site.css">
+  </head>
+
+  <body>
+    <div  id="header">
+      <header>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="../portfolio.html">Portfolio</a>
+          <a href="../blog.html">Blog</a>
+        </nav>
+      </header>
+    </div>
+
+      <div class="post">
+        <div class="post-title">Positioning in CSS: Static, Relative, Absolute &amp Fixed</div>
+        <span class="date">10/19/14 </span><span class="tag">(technical)</span>
+        <p>Positioning elements with CSS is one of those tasks that seem to be relatively intuitive.  Unfortunately, quite often, it is not.  Developing the right mental framework for exactly how positioning works is essential for a novice web designer. So let's jump in!</p>
+        <p>The default position for all elements is <i>static</i>, which means the element appears where it normally would in the document.  Of course normally, you don't see this setting, since it's the default.</p>
+        <p class="code-blog">div {<br>&nbsp &nbsp position: static; <br>
+        }</p>
+
+        <p>Next is <i>relative</i>, which moves the element relative to where it would normally appear.  The properties that can be used in conjunction with <i>relative</i> are <i>top, bottom, left</i> and <i>right</i>. For example, the below code would move an element 20 pixels down and 10 pixels to the right.</p>
+        <p class="code-blog">div {<br>&nbsp &nbsp position: relative; <br>
+          &nbsp &nbsp top: 20px; <br>
+          &nbsp &nbsp left: 10px; <br>
+          }</p>
+
+        <p>The third value for position is <i>absolute</i>, which moves specifies the position relative to the browser window, regardless of where if would usually appear.  As another example, the below code would move an element into the top right corner of the browser even if it was nested inside other elements. Just like the little red box on this page!</p>
+        <p class="code-blog">div {<br>&nbsp &nbsp position: absolute; <br>
+          &nbsp &nbsp top: 50px; <br>
+          &nbsp &nbsp right: 3%; <br>
+        }</p>
+
+        <p>Finally, we have <i>fixed</i>. A <i>fixed</i> element will stay in the same position on the browser screen even as you scroll up or down, just like our little green friend!</p>
+        <p class="code-blog">div {<br>&nbsp &nbsp position: static; <br>
+          &nbsp &nbsp top: 150px; <br>
+          &nbsp &nbsp right: 3%; <br>
+        }</p>
+        <p>To go a little more in depth, I recommend taking at <a href="http://www.barelyfitz.com/screencast/html-training/css/positioning/">this tutorial</a>.  Get positioning!</p>
+
+        <div class="fixed-block">I'm <i>fixed</i>!</div>
+        <div class="absolute-block">I'm <br><i>absolute</i>!</div>
+      </div>
+  </body>
+
+
+<html>
+
+
+
