@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays versus Hashes in Ruby - Rex Salisbury</title>
+    <link rel="stylesheet" type="text/css" href="../blog-template.css">
+    <link rel="stylesheet" type="text/css" href="../site.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300italic' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <div  id="header">
+      <header>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="../portfolio.html">Portfolio</a>
+          <a href="../blog.html">Blog</a>
+        </nav>
+      </header>
+    </div>
+
+      <article class="post">
+        <div class="post-title">Arrays vs Hashes in Ruby</div>
+        <p>
+          Why use one versus the other?  First let's start with the ways in which the two are similar.  They are both indexed collections that store objects, which can be accessed using a key.  For hashes, that key can be anything including another object; while for arrays the key is an integer reflecting the objects position in the array. So as you can tell, they have quite a lot in common with the key difference being what consitutes a key.
+        </p>
+        <p>The flexibility of the using any object as a key for hashes can be quite helpful.  To employ an oft used example, if you have a menu with items and prices, you can think of the item as the key and the price as the object to be retrieved. You could achieve a similar result in a variety of ways with an array, but it would be a lot messier and take more work and who wants that?  Anyways, I'm feeling tired, it's late in the afternoon and would love a coffee.  I wonder what it costs?</p>
+        <p class="code-blog"> menu = {
+          <br> &nbsp &nbsp 'coffee'     => 8.00,
+          <br> &nbsp &nbsp '3 wishes'  => 2.00,
+          <br> &nbsp &nbsp 'fig pig sandwich'      => 4.45,
+          <br> &nbsp &nbsp 'espresso'      => 9.00,
+          <br>}
+          <br>
+          <br>menu['coffee'] &nbsp &nbsp &nbsp &nbsp# returns $8
+        </p>
+        <p>$8! Thanks, but I'll stick with instant.  The wishes on the other hand look like a bargain...  </p>
+        <br>
+        <p>For more on hashes, check out <a href="http://rubymonk.com/learning/books/1-ruby-primer/chapters/10-hashes-in-ruby/lessons/47-hashes-in-and-out">Ruby Monk</a>. And to learn some Ruby shortcuts, including some for arrays, go <a href="http://caiustheory.com/ruby-shortcuts/">here</a>.</p>
+
+
+      </article>
+  </body>
+
+
+<html>
+
+
+
