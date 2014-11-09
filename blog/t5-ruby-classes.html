@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruby Classes and Flying Bison</title>
+    <link rel="stylesheet" type="text/css" href="../blog-template.css">
+    <link rel="stylesheet" type="text/css" href="../site.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/hybrid.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+
+  <body>
+    <div  id="header">
+      <header>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="../portfolio.html">Portfolio</a>
+          <a href="../blog.html">Blog</a>
+        </nav>
+      </header>
+    </div>
+
+      <article class="post">
+        <div class="post-title">Ruby Classes and Flying Bison</div>
+        <span class="date">11/09/14</span><span class="tag">(technical)</span>
+
+        <p>Ruby is an object oriented language, so programming in ruby often requires you to create objects that interact with each other.  For instance, you might definitely want to model the movements of one of the great even-toed ungulates, the american bison.</p>
+
+        <p>First, you need to create a class to hold information about the magnificent animal.</p>
+
+        <pre><code>class Bison
+end</code></pre>
+
+        <p>Boom.  You have now created the class bison.  Classes are just groupings of objects, so if you want some real live computer bison to manipulate, you need to create some instances of the class, which is done in the following manner.</p>
+
+        <pre><code>mama_bison = Bison.new
+baby_bison = Bison.new</code></pre>
+
+        <p>Now you have bison.  The variables mama_bison and baby_bison are storing instances of the class Bison.  But you want them to do something you say?  Unfortunately, our class as currently defined is a rather rude facsimile of our bovine friends.  We should probably add some information to keep track of how far mama and bay bison are walking.</p>
+
+        <pre><code>class Bison
+    def initialize(km)
+        @walked = km
+    end
+end
+
+mama_bison = Bison.new(5)
+baby_bison = Bison.new(10)
+        </code></pre>
+
+        Now when we have added an instance variable @walked to class.  An instance variable stores information for each instance, in this case, both mama and baby have their own @walked variable.  We&rsquo;ve added an argument to #initialize, which makes it possible to set the value of @walked when we create each instance.  So here, we are saying that the mama and baby have already walked 5 and 10 miles respectively.
+
+        Initialize is a special method that initializes the new instances of a class and can be called with #new.  Lets create two more methods, one that lets us add kilometers to how far our bison have walked and another to let us read the value of @walked.
+
+<pre><code>class Bison
+    def initialize(km)
+        @walked = km
+    end
+
+    def walk(km)
+        @walked += km
+    end
+
+    def km_walked
+        @walked
+    end
+end
+
+mama_bison = Bison.new(5)
+baby_bison = Bison.new(10)
+
+mama_bison.walk(7)
+baby_bison.walk(14)
+
+puts mama_bison.km_walked # => 12
+puts baby_bison.km_walked # => 24</code></pre>
+
+        <p>Now, you&rsquo;ve seen how to initialize a class, create multiple instances and run methods on those instances.  Awesome!</p>
+
+       <p> But, we&rsquo;re not done yet.  We&rsquo;ve just learned about a new form of the American Bison.  We&rsquo;re not sure how it happened, perhaps through rapid evolution induced by the destruction of natural habitats or the  machinations of a rogue geneticist.  But it has happened.  These new bison can fly.</p>
+
+        <p>Unfortunately, our current class isn&rsquo;t really equipped to deal with flying bison (in fact, the only thing we&rsquo;ve enabled them to do is walk).  Rather than write a whole new class, we can use inheritance to add in the ability to fly!</p>
+
+<pre><code>class FlyingBison > Bison
+    def initialize(walked, flown)
+        @walked = walked
+        @flown = flown
+    end
+
+    def fly(km)
+        @flown += km
+    end
+
+    def flown
+        @flown
+    end
+end
+
+jim = FlyingBison.new(10, 1000)</code></pre>
+
+        <p>jim is the first flying Bison we&rsquo;ve met.  He&rsquo;s been kind enough to fly into San Francisco from Cheyenne to talk about his experience as a flying bison.  Let&rsquo;s ask how far he&rsquo;s walked today.</p>
+
+        <pre><code>jim.walked # => 10</code></pre>
+
+        <p>Interesting, even though we didn&rsquo;t define #walked for the new class, jim knew how to respond.  He inherited the method from the parent class Bison.</p>
+
+        <p>How about, how far he&rsquo;s flow (we had to write a method specific to his class for this one)?</p>
+
+        <pre><code>jim.flown # => 1000</code></pre>
+
+        <p>That&rsquo;s a pretty long flight even for a flying bison.  There are so many more questions I&rsquo;d like to ask, like what do you eat, do you share any attributes with other ungulates, how many more FlyingBison are there?  These are all questions you could answer with a little more work, but I&rsquo;m afraid we don&rsquo;t have time for that today.</p>
+      </article>
+  </body>
+<html>
+
+
+
