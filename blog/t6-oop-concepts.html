@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functional v OOP</title>
+    <link rel="stylesheet" type="text/css" href="../blog-template.css">
+    <link rel="stylesheet" type="text/css" href="../site.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/hybrid.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+
+  <body>
+    <div  id="header">
+      <header>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="../portfolio.html">Portfolio</a>
+          <a href="../blog.html">Blog</a>
+        </nav>
+      </header>
+    </div>
+
+      <article class="post">
+        <div class="post-title">Functional v OOP</div>
+        <span class="date">11/14/14 </span><span class="tag">(technical)</span>
+        <p>What&rsquo;s the difference between Functional and Object Oriented Programming (OOP)?  The question comes up quite frequently and can be somewhat bewildering, especially to a novice programmer.  There are a lot of good reasons you could be asking this question, but if you&rsquo;re new to field such as myself, the reason your probably asking is because you want to have a cursory understanding of the difference between the two and calm some fear that you are learning the &quot;wrong&quot; way to program.</p>
+
+        <p>Let&rsquo;s start with a high level discussion of programming languages.  Languages, &quot;are notation...a program is a formal description of the problem you want a computer to solve&quot; (<a href="http://www.paulgraham.com/hundred.html">link</a>). All programming languages are universal languages capable of solving any problem.  Some languages are object oriented, some are functional and many include elements of both, but the difference is a matter of notation, not, in a strictly speaking sense, of capability.  Although, different notation can make certain problems easier or harder to solve.  Some of the most successful languages, like Ruby and Scala, combine elements of both programming styles.</p>
+
+        <p>Now let&rsquo;s take a look at what this difference actually looks like in practice.  At Dev Bootcamp, you first learn OOP, so you should already have a good sense of what that looks like.  In OOP, the world is composed of Objects that interact with each other.  In functional programming, the world is composed of, wait for it, functions, just like you learned about in math class, where one input gives you one output.  Thus, functional programming avoids state and mutable data.  Let&rsquo;s look at some concrete examples (borrowed from <a href="https://code.google.com/p/tokland/wiki/RubyFunctionalProgramming">here</a>).
+        </p>
+
+        <p>Appending Arrays</p>
+        <p>OOP:</p>
+        <pre><code>indexes = [1, 2, 3]
+indexes << 4
+indexes # [1, 2, 3, 4]</code></pre>
+        <p>Functional:</p>
+        <pre><code>indexes = [1, 2, 3]
+all_indexes = indexes + [4] # [1, 2, 3, 4]</code></pre>
+
+        Updating Hashes
+        <p>OOP:</p>
+        <pre><code>hash = {:a => 1, :b => 2}
+hash[:c] = 3
+hash</code></pre>
+        <p>Functional:</p>
+        <pre><code>hash = {:a => 1, :b => 2}
+new_hash = hash.merge(:c => 3)</code></pre>
+
+        Updating Strings
+        <p>OOP:</p>
+        <pre><code>string = "hello"
+string.gsub!(/l/, 'z')
+string # "hezzo"</code></pre>
+        <p>Functional:</p>
+        <pre><code>string = "hello"
+new_string =  string.gsub(/l/, 'z') # "hezzo"</code></pre>
+
+        <p>So what are the examples of Function Programming? By avoiding state and mutable data, it can be argued that Functional Programming produces cleaner code and offers referential transparency, which is to say an expression can be replaced by its values.  Such referential transparency opens up the door to some exciting possibilities (again borrowed from <a href="https://code.google.com/p/tokland/wiki/RubyFunctionalProgramming">here</a>).</p>
+        <ul>
+            <li>Parallelization: If calls to functions are independent, they may be executed in different processes or even machines with no race-condition issues. All the nasty details of "normal" concurrency code (locks, semaphores, ...) just vanish on the functional paradigm.</li>
+            <li>Memoization: Since a function call is equivalent to its return value, they can be cached.</li>
+            <li>Modularization: without state that pervades the whole code, projects can be built with small, black boxes that are tied together, which promotes bottom up programming.</li>
+           <li>Ease of debugging: Functions are isolated, they only depend on their input and their output, so they are very easy to debug.</li>
+        </ul>
+
+        <p>So if you&rsquo;re novice programmer, you can start to think about situations when Functional Programming principles could be incorporated, even if you live in object oriented world.</p>
+
+        <p>Cheers!</p>
+        <p>Additional Resources:</p>
+        <ul>
+            <li><a href="http://sdtimes.com/code-watch-two-great-paradigms-taste-great-together/">Code Watch: Two Great Paradigms Taste Great Together</a></li>
+            <li><a href="http://www.paulgraham.com/noop.html">NOOP - Paul Graham</a></li>
+            <li><a href="http://www.paulgraham.com/reesoo.html">Rees Re: OO - Paul Graham</a></li>
+            <li><a href="http://www.paulgraham.com/hundred.html">The Hundred-Year Language - Paul Graham</a></li>
+            <li><a href="https://code.google.com/p/tokland/wiki/RubyFunctionalProgramming">Ruby Functional Programming</a></li>
+        </ul>
+      </article>
+  </body>
+<html>
+
+
+
