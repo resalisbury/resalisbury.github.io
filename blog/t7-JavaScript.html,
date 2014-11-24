@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javascript Objects</title>
+    <link rel="stylesheet" type="text/css" href="../blog-template.css">
+    <link rel="stylesheet" type="text/css" href="../site.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/hybrid.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+
+  <body>
+    <div  id="header">
+      <header>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="../portfolio.html">Portfolio</a>
+          <a href="../blog.html">Blog</a>
+        </nav>
+      </header>
+    </div>
+
+      <article class="post">
+        <div class="post-title">Javascript Objects</div>
+        <span class="date">11/24/14 </span><span class="tag">(technical)</span>
+        <p>Learning about objects in javascript this week reminds me of the parable of three blind men who happen upon an elephant.  The first feels the trunk it proclaims it to be very much like a snake.  Another places his hands against it sides and declares it to be as large and immovable as a house.  The third grabs the leg and asserts that this animal is very much like a tree.</p>
+
+        <p>When I first came across objects in javascript, I searched for my own metaphors for how to describe what they were based on what I already knew.  At first, I thought that javascript objects were very much like hashes in ruby.  Both have attributes (keys for a hash, properties for an object) that can either be specified when they are first created or added subsequently.</p>
+
+        <p>When I started to learn more about javascript objects, I came to see that they had the added feature of being able to have specific functions assigned to them.  Later, I also learned that constructor methods could also be added to create multiple instances of the same type of object.</p>
+
+        <p>I have yet to see how inheritance and mutability are shown in javascript.  Once I do, I’m sure I’ll have a more complete mental framework for understanding how they work.  For now though, with about 10 hours of javascript under my belt, I feel like a blind man grasping for metaphors that don’t quite fit the bill.  I’m trying to be wary of using such metaphors lest I try to shoehorn my understanding of javascript into my understanding of how other languages work, but it is tempting…</p>
+      </article>
+  </body>
+<html>
+
+
+
