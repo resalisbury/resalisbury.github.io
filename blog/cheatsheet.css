@@ -1,0 +1,32 @@
+body {
+  font-family: Lato;
+}
+
+th {
+  text-align: left;
+  font-size: 1em;
+  background-color: #b3c7e4;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+header {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 1%;
+  margin-bottom: 1%;
+}
+
+table {
+  position: block;
+  margin-left: 1%;
+}
+
+td {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+tr:nth-child(2n) {
+  background-color:#f0f2db;
+}
+
