@@ -28,7 +28,7 @@ function setLatLong(position) {
 
 function initialize() {
   getLocation();
-  var pyrmont = new google.maps.LatLng(37.7613981, -122.40302159999999);
+  var pyrmont = new google.maps.LatLng(latitude, longitude);
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
     center: pyrmont,
