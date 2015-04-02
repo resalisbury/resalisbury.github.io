@@ -7,20 +7,18 @@ var infowindow;
 var latitude;
 var longitude;
 
-var locationEl = document.getElementById("location");
 
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(setLatLong);
     } else {
-        locationEl.innerHTML = "Geolocation is not supported by this browser.";
+        window.alert("Geolocation is not supported by this browser.");
     }
 }
 
-function showPosition(position) {
+function setLatLong(position) {
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
-
 }
 
 function initialize() {
