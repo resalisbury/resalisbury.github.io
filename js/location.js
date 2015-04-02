@@ -58,3 +58,4 @@ function createMarker(place) {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+getLocation();
