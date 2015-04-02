@@ -20,8 +20,6 @@ function getLocation() {
 function showPosition(position) {
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
-    document.getElementById("location").innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
 }
 
 function initialize() {
