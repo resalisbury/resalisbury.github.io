@@ -1,7 +1,11 @@
 console.log("hello")
+getLocation();
+google.maps.event.addDomListener(window, 'load', initialize);
 
 var map;
 var infowindow;
+var latitude;
+var longitude;
 
 var locationEl = document.getElementById("location");
 
@@ -14,12 +18,14 @@ function getLocation() {
 }
 
 function showPosition(position) {
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
     document.getElementById("location").innerHTML = "Latitude: " + position.coords.latitude +
     "<br>Longitude: " + position.coords.longitude;
 }
 
 function initialize() {
-  var pyrmont = new google.maps.LatLng(-33.8665433, 151.1956316);
+  var pyrmont = new google.maps.LatLng(latitude, longitude);
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
     center: pyrmont,
@@ -29,7 +35,8 @@ function initialize() {
   var request = {
     location: pyrmont,
     radius: 500,
-    types: ['store']
+    types: ['bar'],
+    open_now: 'true',
   };
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
@@ -57,5 +64,3 @@ function createMarker(place) {
   });
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-getLocation();
