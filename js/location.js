@@ -7,7 +7,7 @@ var myLatLng;
 console.log("hello");
 getLocation();
 console.log(myLatLng);
-initialize(latitude, longitude);
+google.maps.event.addDomListener(window, 'load', initialize(latitude, longitude));
 
 
 
@@ -31,15 +31,15 @@ function setLatLong(position) {
 }
 
 function initialize(lat, longit) {
-  var centerMap = new google.maps.LatLng(lat, longit);
+  // var centerMap = new google.maps.LatLng(lat, longit);
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: centerMap,
+    center: myLatLng,
     zoom: 12
   });
 
   var request = {
-    location: centerMap,
+    location: myLatLng,
     radius: 8000,
     types: ['bar'],
     open_now: 'true',
@@ -72,4 +72,3 @@ function createMarker(place) {
   });
 }
 
-//
