@@ -1,6 +1,6 @@
 console.log("hello")
 // getLocation();
-google.maps.event.addDomListener(window, 'load', initialize);
+initialize();
 
 var map;
 var infowindow;
