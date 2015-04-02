@@ -49,10 +49,12 @@ function callback(results, status) {
 }
 
 function createMarker(place) {
+  var image = './imgs/beer.png';
   var placeLoc = place.geometry.location;
   var marker = new google.maps.Marker({
     map: map,
-    position: place.geometry.location
+    position: place.geometry.location,
+    icon: image
   });
 
   google.maps.event.addListener(marker, 'click', function() {
