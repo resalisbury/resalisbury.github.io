@@ -17,8 +17,13 @@ function getLocation() {
 }
 
 function setLatLong(position) {
-    latitude = position.coords.latitude;
-    longitude = position.coords.longitude;
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
+  var myLatLng = new google.maps.LatLng(latitude, longitude);
+  var myLocation = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+  });
 }
 
 function initialize() {
