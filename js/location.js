@@ -7,7 +7,7 @@ var myLatLng;
 console.log("hello");
 getLocation();
 console.log(myLatLng);
-google.maps.event.addDomListener(window, 'load', initialize(latitude, longitude));
+initialize(latitude, longitude);
 
 
 
