@@ -6,6 +6,7 @@ var map;
 var infowindow;
 var latitude;
 var longitude;
+var myLatLng;
 
 
 function getLocation() {
@@ -19,7 +20,7 @@ function getLocation() {
 function setLatLong(position) {
   latitude = position.coords.latitude;
   longitude = position.coords.longitude;
-  var myLatLng = new google.maps.LatLng(latitude, longitude);
+  myLatLng = new google.maps.LatLng(latitude, longitude);
   var myLocation = new google.maps.Marker({
     position: myLatLng,
     map: map,
@@ -27,15 +28,15 @@ function setLatLong(position) {
 }
 
 function initialize() {
-  var pyrmont = new google.maps.LatLng(latitude, longitude);
+  // var pyrmont = new google.maps.LatLng(latitude, longitude);
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: pyrmont,
+    center: myLatLng,
     zoom: 12
   });
 
   var request = {
-    location: pyrmont,
+    location: myLatLng,
     radius: 8000,
     types: ['bar'],
     open_now: 'true',
