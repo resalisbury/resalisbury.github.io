@@ -20,18 +20,20 @@ function getLocation() {
 function showPosition(position) {
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
+    document.getElementById("location").innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
 }
 
 function initialize() {
-  var currentLatLong = new google.maps.LatLng(latitude, longitude);
+  var currentLa = new google.maps.LatLng(latitude, longitude);
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: currentLatLong,
+    center: currentLa,
     zoom: 15
   });
 
   var request = {
-    location: currentLatLong,
+    location: currentLa,
     radius: 8000,
     types: ['bar'],
     open_now: 'true',
