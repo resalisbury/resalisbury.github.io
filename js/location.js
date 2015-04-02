@@ -1,6 +1,7 @@
-console.log("hello")
+console.log("hello");
 // getLocation();
-initialize();
+console.log(myLatLng);
+google.maps.event.addDomListener(window, 'load', initialize);
 
 var map;
 var infowindow;
