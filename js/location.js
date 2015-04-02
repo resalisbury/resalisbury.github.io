@@ -1,13 +1,15 @@
-console.log("hello");
-getLocation();
-console.log(myLatLng);
-google.maps.event.addDomListener(window, 'load', initialize);
-
 var map;
 var infowindow;
 var latitude;
 var longitude;
 var myLatLng;
+
+console.log("hello");
+getLocation();
+console.log(myLatLng);
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
 
 
 function getLocation() {
