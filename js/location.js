@@ -3,7 +3,7 @@ console.log("hello")
 var map;
 var infowindow;
 
-var locationEl = document.getElementById("location")
+var locationEl = document.getElementById("location");
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -14,7 +14,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    locationEl.innerHTML = "Latitude: " + position.coords.latitude +
+    document.getElementById("location").innerHTML = "Latitude: " + position.coords.latitude +
     "<br>Longitude: " + position.coords.longitude;
 }
 
