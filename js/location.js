@@ -25,15 +25,15 @@ function showPosition(position) {
 }
 
 function initialize() {
-  var currentLa = new google.maps.LatLng(latitude, longitude);
+  var pyrmont = new google.maps.LatLng(37.7613981, -122.40302159999999);
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: currentLa,
+    center: pyrmont,
     zoom: 15
   });
 
   var request = {
-    location: currentLa,
+    location: pyrmont,
     radius: 8000,
     types: ['bar'],
     open_now: 'true',
