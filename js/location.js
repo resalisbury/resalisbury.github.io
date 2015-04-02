@@ -34,7 +34,7 @@ function initialize() {
 
   var request = {
     location: pyrmont,
-    radius: 500,
+    radius: 8000,
     types: ['bar'],
     open_now: 'true',
   };
