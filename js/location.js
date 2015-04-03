@@ -7,7 +7,7 @@ var myLatLng;
 console.log("hello");
 getLocation();
 console.log(myLatLng);
-google.maps.event.addDomListener(window, 'load', initialize(latitude, longitude));
+google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
@@ -30,8 +30,9 @@ function setLatLong(position) {
   });
 }
 
-function initialize(lat, longit) {
+function initialize() {
   // var centerMap = new google.maps.LatLng(lat, longit);
+  myLatLng = new google.maps.LatLng(37.784586999999995, -122.397551);
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
     center: myLatLng,
