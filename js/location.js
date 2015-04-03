@@ -6,8 +6,8 @@ var myLatLng;
 
 console.log("hello");
 getLocation();
-console.log(myLatLng);
 window.setTimeout(initialize, 3000);
+console.log(myLatLng);
 
 
 
