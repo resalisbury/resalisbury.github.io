@@ -7,6 +7,7 @@ var myLatLng;
 console.log("hello");
 getLocation();
 window.setTimeout(initialize, 3000);
+window.setTimeout(initialize, 3000);
 console.log(myLatLng);
 
 
@@ -32,7 +33,7 @@ function setLatLong(position) {
 
 function initialize() {
   // var centerMap = new google.maps.LatLng(lat, longit);
-  myLatLng = new google.maps.LatLng(37.784586999999995, -122.397551);
+  // myLatLng = new google.maps.LatLng(37.784586999999995, -122.397551);
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
     center: myLatLng,
