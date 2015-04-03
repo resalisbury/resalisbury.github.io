@@ -6,9 +6,7 @@ var myLatLng;
 
 console.log("hello");
 getLocation();
-window.setTimeout(initialize, 3000);
-window.setTimeout(initialize, 3000);
-console.log(myLatLng);
+window.setTimeout(initialize, 6000);
 
 
 
@@ -25,10 +23,10 @@ function setLatLong(position) {
   latitude = position.coords.latitude;
   longitude = position.coords.longitude;
   myLatLng = new google.maps.LatLng(latitude, longitude);
-  var myLocation = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-  });
+  // var myLocation = new google.maps.Marker({
+  //   position: myLatLng,
+  //   map: map,
+  // });
 }
 
 function initialize() {
